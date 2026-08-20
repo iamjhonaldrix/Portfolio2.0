@@ -106,6 +106,15 @@ export default function Album() {
       description: "Personal gallery photo 08.",
       date: "2026",
       tags: ["Gallery", "Photo"]
+    },
+    {
+      id: "11",
+      title: "Snapshot 11",
+      category: "CAVOICE",
+      src: "/image/img11.JPG",
+      description: "Personal gallery photo 08.",
+      date: "2026",
+      tags: ["Gallery", "Photo"]
     }
 ];
 

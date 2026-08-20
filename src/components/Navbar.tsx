@@ -7,7 +7,7 @@ export default function Navbar() {
     { name: 'About', href: '#about' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Writeups', href: '#writeups' },
+    { name: 'Writeups', href: 'https://b3rl1n.gitbook.io/b3rl1n/' },
   ];
 
   return (

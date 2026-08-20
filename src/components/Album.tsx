@@ -94,7 +94,7 @@ export default function Album() {
       title: "Snapshot 9",
       category: "Personal",
       src: "/image/img9.JPG",
-      description: "Personal gallery photo 08.",
+      description: "Personal gallery photo 09.",
       date: "2026",
       tags: ["Gallery", "Photo"]
     },
@@ -103,7 +103,7 @@ export default function Album() {
       title: "Snapshot 10",
       category: "My Baby",
       src: "/image/img10.JPG",
-      description: "Personal gallery photo 08.",
+      description: "Personal gallery photo 10.",
       date: "2026",
       tags: ["Gallery", "Photo"]
     },
@@ -112,7 +112,7 @@ export default function Album() {
       title: "Snapshot 11",
       category: "CAVOICE",
       src: "/image/img11.JPG",
-      description: "Personal gallery photo 08.",
+      description: "Personal gallery photo 11.",
       date: "2026",
       tags: ["Gallery", "Photo"]
     }

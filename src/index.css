@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  /* Dynamic gradient layer layered over your base background color */
+  background: linear-gradient(-45deg, #090a0b, #111827, #1e1b4b, #090a0b);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  
+  color: #f8fafc; 
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  scroll-behavior: smooth;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html, body {
+    animation: none;
+    background: #090a0b;
+  }
+}

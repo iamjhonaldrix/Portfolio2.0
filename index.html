@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="b3rl1n.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B3RL1N | Dev</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <script>
+      const titleStates = [
+        "B3RL1N | Cybersecurity",
+        "B3RL1N | Web Developer",
+        "B3RL1N | Network Engineer",
+        "B3RL1N | [System Online]"
+      ];
+      const awayTitle = "⚠️ System Error ";
+      let index = 0;
+      let titleInterval = null;
+
+      function startTitleRotation() {
+        if (!titleInterval) {
+          titleInterval = setInterval(() => {
+            document.title = titleStates[index];
+            index = (index + 1) % titleStates.length;
+          }, 2500);
+        }
+      }
+
+      function stopTitleRotation() {
+        clearInterval(titleInterval);
+        titleInterval = null;
+      }
+
+      startTitleRotation();
+
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          stopTitleRotation();
+          document.title = awayTitle;
+        } else {
+          document.title = titleStates[index];
+          startTitleRotation();
+        }
+      });
+    </script>
+  </body>
+</html>

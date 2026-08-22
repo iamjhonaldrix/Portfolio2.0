@@ -29,7 +29,7 @@ export default function Contacts() {
   ];
 
   return (
-    <section className="py-8 px-4 max-w-md mx-auto">
+    <section id="contacts" className="py-8 px-4 max-w-md mx-auto">
       <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">
         Contact Me
       </h2>

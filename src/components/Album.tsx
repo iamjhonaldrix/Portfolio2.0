@@ -56,7 +56,7 @@ export default function Album() {
     {
       id: "5",
       title: "Snapshot 05",
-      category: "Bob",
+      category: "cHIMPPPP",
       src: "/image/img5.JPG",
       description: "Personal gallery photo 05.",
       date: "2026",

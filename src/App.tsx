@@ -6,6 +6,7 @@ import AboutMe from './components/About';
 import TechStack from './components/Skills';
 import Certifications from './components/Certification';
 import Album from './components/Album';
+import Contacts from './components/Contacts';
 import Footer from './components/Footer';
 
 
@@ -28,6 +29,7 @@ function App() {
               <TechStack />
               <Certifications />
               <Album />
+              <Contacts />
               <Footer />
             </>
           }

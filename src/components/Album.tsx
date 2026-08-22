@@ -122,7 +122,7 @@ export default function Album() {
   // Featured photos shown on main grid (First 3 photos)
   const featuredMedia = allMediaArchive.slice(0, 3);
 
-  const filters = ["All", "Personal"];
+  const filters = ["All"];
 
   const filteredFeatured =
     activeFilter === "All"

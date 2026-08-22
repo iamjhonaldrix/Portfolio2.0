@@ -33,12 +33,12 @@ export default function Certifications() {
       certUrl: "/certification/LinuxOps.png"
     },
     {
-      title: "TICO Certification",
-      issuer: "Travel Industry Council of Ontario",
-      category: "Professional / Non-IT",
+      title: "NetOps Certified Engineer (NTO-101)",
+      issuer: "Appkademia",
+      category: "Professional / Network",
       status: "Verified",
-      skills: ["Regulatory Compliance", "Industry Standards", "Professional Ethics"],
-      certUrl: "/certification/TICO.png"
+      skills: ["Networking Security", "Networking", "Network Engineer"],
+      certUrl: "/certification/NetOps.png"
     }
   ];
 
@@ -53,6 +53,15 @@ export default function Certifications() {
       date: "2026",
       skills: ["Cyber Hygiene", "Threat Vectors", "Network Defense"],
       certUrl: "/certification/IntroCyberSec.png"
+    },
+    {
+      title: "TICO Certification",
+      issuer: "Travel Industry Council of Ontario",
+      category: "Professional / Non-IT",
+      status: "Verified",
+      date: "2026",
+      skills: ["Regulatory Compliance", "Industry Standards", "Professional Ethics"],
+      certUrl: "/certification/TICO.png"
     },
     {
       title: "Python Essentials 1",

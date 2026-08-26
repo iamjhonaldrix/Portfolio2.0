@@ -1,5 +1,3 @@
-'use client'; // Required if using Next.js App Router
-
 import React, { useEffect, useRef } from 'react';
 
 export default function InteractiveBackground() {

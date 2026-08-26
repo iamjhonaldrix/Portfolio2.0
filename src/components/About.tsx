@@ -26,17 +26,17 @@ export default function About() {
 
             <div className="space-y-4 text-slate-300 text-base sm:text-lg leading-relaxed">
               <p>
-                I am an IT student and developer specializing in cybersecurity, system defense, and modern web technologies. My work centers on leveraging <span className="text-white font-medium">Python and C</span> to engineer secure applications and analyze software vulnerabilities.
+                I am an IT student and developer specializing in cybersecurity, networking, and modern web technologies. My work centers on leveraging <span className="text-white font-medium">Python and C</span> to engineer secure applications and analyze software and understand hardware vulnerabilities.
               </p>
               <p>
-                With a strong background in CTF competitions and custom scripting, I bridge the gap between software development and security analysis to build resilient systems from the ground up.
+                With a strong background in CTF competitions and custom scripting (ai assistance), I bridge the gap between software development and security analysis to build resilient systems from the ground up.
               </p>
             </div>
           </div>
 
           <div className="mt-8 pt-4 border-t border-slate-800/80 flex items-center gap-2 text-indigo-300 text-sm font-mono">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>Focus: Network Defense & System Security</span>
+            <span>Focus: Networking & System Security</span>
           </div>
         </div>
 

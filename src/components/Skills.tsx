@@ -6,7 +6,7 @@ export default function TechStack() {
   const languages = ["Python", "C", "JavaScript", "Bash"];
 
   return (
-    <section id="skills" className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 font-sans">
+    <section id="skills" className="w-full max-w-6xl mx-auto scroll-mt-24 px-4 sm:px-6 lg:px-8 py-12 font-sans">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
         
         {/* Left: Tech Stack & Skills (7 Cols) */}

@@ -1,26 +1,41 @@
 import React, { useEffect, useRef } from 'react';
 
 export default function InteractiveBackground() {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
+    if (!ctx) return;
 
     // Respect reduced motion settings
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
-    let particles = [];
-    let ripples = [];
-    let animationFrameId;
+    let particles: Particle[] = [];
+    let ripples: Ripple[] = [];
+    let animationFrameId: number;
     let time = 0;
 
-    const mouse = { x: null, y: null, radius: 180 };
+    const mouse: { x: number | null; y: number | null; radius: number } = {
+      x: null,
+      y: null,
+      radius: 180,
+    };
 
     class Particle {
+      x: number;
+      y: number;
+      baseX: number;
+      baseY: number;
+      size: number;
+      vx: number;
+      vy: number;
+      waveOffset: number;
+      color: string;
+
       constructor() {
         this.x = Math.random() * width;
         this.y = Math.random() * height;
@@ -80,6 +95,7 @@ export default function InteractiveBackground() {
       }
 
       draw() {
+        if (!ctx) return;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(${this.color}, 0.7)`;
@@ -88,7 +104,14 @@ export default function InteractiveBackground() {
     }
 
     class Ripple {
-      constructor(x, y) {
+      x: number;
+      y: number;
+      radius: number;
+      maxRadius: number;
+      alpha: number;
+      speed: number;
+
+      constructor(x: number, y: number) {
         this.x = x;
         this.y = y;
         this.radius = 0;
@@ -103,6 +126,7 @@ export default function InteractiveBackground() {
       }
 
       draw() {
+        if (!ctx) return;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.strokeStyle = `rgba(165, 180, 252, ${Math.max(0, this.alpha * 0.5)})`;
@@ -120,6 +144,7 @@ export default function InteractiveBackground() {
     };
 
     const drawConnections = () => {
+      if (!ctx) return;
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -139,7 +164,7 @@ export default function InteractiveBackground() {
       }
     };
 
-    const animate = (timestamp) => {
+    const animate = (timestamp: number) => {
       time = timestamp;
       ctx.clearRect(0, 0, width, height);
 
@@ -161,14 +186,13 @@ export default function InteractiveBackground() {
       animationFrameId = requestAnimationFrame(animate);
     };
 
-    // Listeners on window capture global mouse movement & clicks across the screen
     const handleResize = () => {
       width = canvas.width = window.innerWidth;
       height = canvas.height = window.innerHeight;
       initParticles();
     };
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       mouse.x = e.clientX;
       mouse.y = e.clientY;
     };
@@ -178,7 +202,7 @@ export default function InteractiveBackground() {
       mouse.y = null;
     };
 
-    const handleClick = (e) => {
+    const handleClick = (e: MouseEvent) => {
       ripples.push(new Ripple(e.clientX, e.clientY));
     };
 

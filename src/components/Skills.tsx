@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
 
 export default function TechStack() {
-  const skills = ["Ethical Hacking", "Networking Fundamentals", "Linux Administration", "CTF Competitions"];
+  const skills = [
+    "Ethical Hacking",
+    "Networking Fundamentals",
+    "Linux Administration",
+    "CTF Competitions",
+    "Container Security",
+  ];
   const tools = ["Kali Linux", "Nmap", "Wireshark", "Burp Suite", "Git & GitHub"];
+  const cloud = ["Docker", "Microsoft Azure"];
   const languages = ["Python", "C", "JavaScript", "Bash"];
 
   return (
@@ -49,6 +56,18 @@ export default function TechStack() {
                 </div>
               </div>
 
+              {/* Category: Cloud & DevOps */}
+              <div>
+                <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-3">Cloud &amp; DevOps</h3>
+                <div className="flex flex-wrap gap-2">
+                  {cloud.map((item, i) => (
+                    <span key={i} className="px-3 py-1.5 rounded-lg bg-sky-950/40 border border-sky-800/50 text-sky-300 text-xs sm:text-sm font-mono">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
               {/* Category: Programming */}
               <div>
                 <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-3">Languages</h3>
@@ -86,7 +105,11 @@ export default function TechStack() {
               </p>
 
               <p className="text-slate-400 text-xs sm:text-sm">
-                Actively solving hands-on labs (TryHackMe & Hack The Box) to analyze how systems break and engineering robust controls to protect them.
+                Actively solving hands-on labs (TryHackMe &amp; Hack The Box) to analyze how systems break and engineering robust controls to protect them.
+              </p>
+
+              <p className="text-slate-400 text-xs sm:text-sm">
+                Learning to containerize apps with Docker and deploy them on Microsoft Azure with security built in: minimal images, non-root users, and proper secret management.
               </p>
 
               <div className="pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-mono">

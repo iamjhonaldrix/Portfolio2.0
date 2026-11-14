@@ -7,7 +7,7 @@ export default function Navbar() {
   const navLinks = [
     { name: 'About', href: '#about', external: false },
     { name: 'Skills', href: '#skills', external: false },
-    { name: 'Projects', href: '#projects', external: false },
+    { name: 'Projects', href: 'https://github.com/iamjhonaldrix/', external: false },
     { name: 'Writeups', href: 'https://b3rl1n.gitbook.io/b3rl1n/', external: true },
   ];
 

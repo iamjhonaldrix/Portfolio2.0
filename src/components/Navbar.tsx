@@ -22,7 +22,6 @@ export default function Navbar() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  return (
     <nav 
       ref={navRef}
       className="bg-slate-900/80 backdrop-blur-md text-white border-b border-slate-800/80 fixed top-0 w-full z-50 transition-all duration-300"

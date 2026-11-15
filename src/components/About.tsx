@@ -1,11 +1,11 @@
 export default function About() {
   const competencies = [
-    "Capture The Flag (CTF) challenges & binary exploitation",
+    "Web security & ethical hacking through Capture The Flag (CTF) challenges",
+    "Full-stack web development: secure, scalable applications",
     "Network reconnaissance, enumeration, & packet analysis (Nmap, Wireshark)",
-    "Linux environment administration & shell scripting",
-    "Application vulnerability assessment & secure coding practices",
-    "Version control & collaborative workflows (Git/GitHub)",
-    "Core networking principles & security architecture"
+    "Linux & system skills, including shell scripting",
+    "Containerization with Docker & deployments on Microsoft Azure",
+    "Version control & collaborative workflows (Git/GitHub)"
   ];
 
   return (
@@ -26,17 +26,17 @@ export default function About() {
 
             <div className="space-y-4 text-slate-300 text-base sm:text-lg leading-relaxed">
               <p>
-                I am an IT student and developer specializing in cybersecurity, networking, and modern web technologies. My work centers on leveraging <span className="text-white font-medium">Python and C</span> to engineer secure applications and analyze software and understand hardware vulnerabilities.
+                I&apos;m an IT student at <span className="text-white font-medium">PUP Santa Maria Campus</span> passionate about web development and cybersecurity. I&apos;m currently learning to develop secure and scalable web applications while turning ideas into functional systems, and I&apos;m eager to understand systems and networks in depth.
               </p>
               <p>
-                With a strong background in CTF competitions and custom scripting (ai assistance), I bridge the gap between software development and security analysis to build resilient systems from the ground up.
+                Through Capture The Flag (CTF) challenges, I continuously sharpen my skills in ethical hacking, system security, and full-stack development. I&apos;m also learning to containerize apps with <span className="text-white font-medium">Docker</span> and deploy them on <span className="text-white font-medium">Microsoft Azure</span> to build impactful digital solutions.
               </p>
             </div>
           </div>
 
           <div className="mt-8 pt-4 border-t border-slate-800/80 flex items-center gap-2 text-indigo-300 text-sm font-mono">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>Focus: Networking & System Security</span>
+            <span>Focus: Web Security &amp; Full-Stack Development</span>
           </div>
         </div>
 
